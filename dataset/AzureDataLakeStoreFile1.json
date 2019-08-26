@@ -1,0 +1,19 @@
+{
+	"name": "AzureDataLakeStoreFile1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStore1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureDataLakeStoreFile",
+		"typeProperties": {
+			"format": {
+				"type": "JsonFormat"
+			},
+			"fileName": "",
+			"folderPath": "clusters/hdiadls"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

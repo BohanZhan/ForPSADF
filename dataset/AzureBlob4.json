@@ -1,0 +1,16 @@
+{
+	"name": "AzureBlob4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureBlob",
+		"typeProperties": {
+			"fileName": "",
+			"folderPath": "avro"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

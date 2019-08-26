@@ -1,0 +1,40 @@
+{
+	"name": "BlobString",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureBlob",
+		"structure": [
+			{
+				"name": "TableName",
+				"type": "String"
+			},
+			{
+				"name": "Date",
+				"type": "DateTime",
+				"format": "dd.MM.yyyy"
+			},
+			{
+				"name": "Time",
+				"type": "DateTime",
+				"format": "hh:mm:ss tt"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": "#",
+				"rowDelimiter": "",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": true
+			},
+			"fileName": "Time.txt",
+			"folderPath": "adftutorial"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

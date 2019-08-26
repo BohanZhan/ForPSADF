@@ -1,0 +1,82 @@
+{
+	"name": "AzureBlob1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureBlob",
+		"structure": [
+			{
+				"name": "eReal",
+				"type": "String"
+			},
+			{
+				"name": "eRealNegative",
+				"type": "String"
+			},
+			{
+				"name": "eRealPositive",
+				"type": "String"
+			},
+			{
+				"name": "eReactive",
+				"type": "String"
+			},
+			{
+				"name": "eReactiveNegative",
+				"type": "String"
+			},
+			{
+				"name": "eReactivePositive",
+				"type": "String"
+			},
+			{
+				"name": "vRMSMin",
+				"type": "String"
+			},
+			{
+				"name": "vRMSMax",
+				"type": "String"
+			},
+			{
+				"name": "iRMSMin",
+				"type": "String"
+			},
+			{
+				"name": "iRMSMax",
+				"type": "String"
+			},
+			{
+				"name": "timestamp",
+				"type": "Int64"
+			},
+			{
+				"name": "duration",
+				"type": "Int64"
+			},
+			{
+				"name": "vRMSMax1",
+				"type": "Double"
+			},
+			{
+				"name": "vRMSMax2",
+				"type": "Double"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "TextFormat",
+				"columnDelimiter": ",",
+				"rowDelimiter": "",
+				"treatEmptyAsNull": true,
+				"skipLineCount": 0,
+				"firstRowAsHeader": false
+			},
+			"fileName": "",
+			"folderPath": "adftutorial"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

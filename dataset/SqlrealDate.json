@@ -1,0 +1,29 @@
+{
+	"name": "SqlrealDate",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "Date",
+				"type": "Date"
+			},
+			{
+				"name": "Time",
+				"type": "Date"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[DateTest]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

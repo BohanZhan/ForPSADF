@@ -1,0 +1,105 @@
+{
+	"name": "DynamicBlob",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy Data1",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Set Variable2",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:01",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "BlobSink"
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "AzureBlob3",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureBlob2",
+						"type": "DatasetReference",
+						"parameters": {
+							"FileName": {
+								"value": "Before Table Export_@{variables('var')}_RunID_@{pipeline().RunId}.csv",
+								"type": "Expression"
+							}
+						}
+					}
+				]
+			},
+			{
+				"name": "Set Variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "var2",
+					"value": {
+						"value": "@pipeline().parameters.test",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Set Variable2",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Set Variable1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "var",
+					"value": {
+						"value": "@pipeline().parameters.test",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"test": {
+				"type": "string"
+			}
+		},
+		"variables": {
+			"var": {
+				"type": "String",
+				"defaultValue": "LOCALTEST"
+			},
+			"var2": {
+				"type": "String",
+				"defaultValue": "00000"
+			}
+		},
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

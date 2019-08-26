@@ -1,0 +1,16 @@
+{
+	"name": "AzureBlob5",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureBlob",
+		"typeProperties": {
+			"fileName": "",
+			"folderPath": "repo/rename test"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

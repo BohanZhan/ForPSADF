@@ -1,0 +1,118 @@
+{
+	"name": "SP",
+	"properties": {
+		"activities": [
+			{
+				"name": "Lookup1",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderStoredProcedureName": "[dbo].[OUTPUT6]",
+						"storedProcedureParameters": {
+							"OO": {
+								"type": "String",
+								"value": "123"
+							},
+							"TableName": {
+								"type": "String",
+								"value": "data_source_table"
+							}
+						}
+					},
+					"dataset": {
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
+					}
+				}
+			},
+			{
+				"name": "Set Variable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Lookup1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "TEST",
+					"value": {
+						"value": "@{activity('Lookup1').output.firstRow.Name}",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Stored Procedure1",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[dbo].[OUTPUT3]",
+					"storedProcedureParameters": {
+						"OO": {
+							"value": "ddd",
+							"type": "String"
+						},
+						"TableName": {
+							"value": "data_source_table",
+							"type": "String"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureSqlDatabase1",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "SetVariable1",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Stored Procedure1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "TEST",
+					"value": {
+						"value": "@{activity('Stored Procedure1').output.firstRow.Name}",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"variables": {
+			"TEST": {
+				"type": "String",
+				"defaultValue": "123"
+			}
+		},
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

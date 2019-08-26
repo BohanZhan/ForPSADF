@@ -1,0 +1,19 @@
+{
+	"name": "RestResource2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "RestServiceBH",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": "https://api.wattwatchers.com.au/v2/long-energy/D704206260013?",
+			"requestMethod": "GET",
+			"additionalHeaders": {
+				"Authorization": "Bearer key_9b13fe24a8abbc80522e355cd21ae477"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

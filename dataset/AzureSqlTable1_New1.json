@@ -1,0 +1,25 @@
+{
+	"name": "AzureSqlTable1_New1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "DateString",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[JsonSink]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

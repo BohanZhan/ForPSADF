@@ -1,0 +1,18 @@
+{
+	"name": "Binary1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "HttpServer1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "http://static.data.gov.hk/td/routes-and-fares/RSTOP_BUS.mdb"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

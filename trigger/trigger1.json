@@ -1,0 +1,35 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Adfv2QuickStartPipeline",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"inputPath": "a",
+					"outputPath": "a"
+				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "SQL2BLOB",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 2,
+				"startTime": "2019-07-30T05:44:00Z",
+				"endTime": "2019-09-01T07:14:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

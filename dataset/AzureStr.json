@@ -1,0 +1,26 @@
+{
+	"name": "AzureStr",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "Name",
+				"type": "String"
+			},
+			{
+				"name": "DateString",
+				"type": "Date",
+				"format": "dd.MM.yyyy"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[DateTest2]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

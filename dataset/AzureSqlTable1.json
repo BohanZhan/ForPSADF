@@ -1,0 +1,69 @@
+{
+	"name": "AzureSqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "eReal",
+				"type": "Double"
+			},
+			{
+				"name": "eRealNegative",
+				"type": "String"
+			},
+			{
+				"name": "eRealPositive",
+				"type": "String"
+			},
+			{
+				"name": "eReactiveNegative",
+				"type": "String"
+			},
+			{
+				"name": "eReactivePositive",
+				"type": "String"
+			},
+			{
+				"name": "vRMSMin",
+				"type": "String"
+			},
+			{
+				"name": "vRMSMax",
+				"type": "String"
+			},
+			{
+				"name": "iRMSMin",
+				"type": "String"
+			},
+			{
+				"name": "iRMSMax",
+				"type": "String"
+			},
+			{
+				"name": "timestamp",
+				"type": "Int64"
+			},
+			{
+				"name": "duration",
+				"type": "Int64"
+			},
+			{
+				"name": "vRMSMax1",
+				"type": "Single"
+			},
+			{
+				"name": "vRMSMax2",
+				"type": "Single"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[JsonSink]"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,63 @@
+{
+	"name": "Jsonpipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy Data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 3,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true
+					},
+					"sink": {
+						"type": "SqlSink",
+						"writeBatchSize": 10000
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"eReal": "eReal",
+							"eRealNegative": "eRealNegative",
+							"eRealPositive": "eRealPositive",
+							"eReactiveNegative": "eReactiveNegative",
+							"eReactivePositive": "eReactivePositive",
+							"vRMSMin": "vRMSMin",
+							"vRMSMax": "vRMSMax",
+							"iRMSMin": "iRMSMin",
+							"iRMSMax": "iRMSMax",
+							"timestamp": "timestamp",
+							"duration": "duration",
+							"vRMSMax1": "vRMSMax1",
+							"vRMSMax2": "vRMSMax2"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "AzureBlob1",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,20 @@
+{
+	"name": "Hive1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "Hive",
+		"typeProperties": {
+			"host": "bhhive.azurehdinsight.net",
+			"port": 443,
+			"serverType": "HiveServer2",
+			"thriftTransportProtocol": "HTTP",
+			"authenticationType": "WindowsAzureHDInsightService",
+			"serviceDiscoveryMode": false,
+			"useNativeQuery": false,
+			"username": "admin",
+			"enableSsl": false,
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkJIUFNBREZfYmRjYjU0NDQtMzY4YS00NGM1LTgwNjMtMzNlYzIyZTg0Y2I4Ig0KfQ=="
+		}
+	}
+}
