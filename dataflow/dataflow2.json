@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "AzureSqlTable1_New1",
+						"referenceName": "AzureSqlTable1_New2",
 						"type": "DatasetReference"
 					},
 					"name": "source1"
@@ -22,7 +22,7 @@
 				}
 			],
 			"transformations": [],
-			"script": "\n\nsource(output(\n\t\teReal as string,\n\t\teRealNegative as string,\n\t\teRealPositive as string,\n\t\teReactiveNegative as string,\n\t\teReactivePositive as string,\n\t\tvRMSMin as string,\n\t\tvRMSMax as string,\n\t\tiRMSMin as string,\n\t\tiRMSMax as string,\n\t\ttimestamp as long,\n\t\tduration as long,\n\t\tvRMSMax1 as float,\n\t\tvRMSMax2 as float\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> source1\nsource1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tpartitionBy('hash', 1)) ~> sink1"
+			"script": "\n\nsource(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> source1\nsource1 sink(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tpartitionBy('hash', 1)) ~> sink1"
 		}
 	}
 }
