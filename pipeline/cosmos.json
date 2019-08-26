@@ -1,6 +1,7 @@
 {
 	"name": "cosmos",
 	"properties": {
+		"description": "1",
 		"activities": [
 			{
 				"name": "Copy Data1",
