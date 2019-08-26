@@ -1,0 +1,216 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "bhpsadf"
+		},
+		"integrationRuntime_SHIR": {
+			"value": "SHIR"
+		},
+		"integrationRuntime_integrationRuntime2": {
+			"value": "integrationRuntime2"
+		},
+		"ADLSgen2_accountKey": {
+			"value": ""
+		},
+		"AzureBatch1_accessKey": {
+			"value": ""
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage3_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStore1_servicePrincipalKey": {
+			"value": ""
+		},
+		"AzureDatabricks1_accessToken": {
+			"value": ""
+		},
+		"AzureDatabricksVnet_accessToken": {
+			"value": ""
+		},
+		"AzureFunction1_functionKey": {
+			"value": ""
+		},
+		"AzureMySql1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDW1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_connectionString": {
+			"value": ""
+		},
+		"AzureStorageLinkedService_connectionString": {
+			"value": ""
+		},
+		"CosmosDb1_connectionString": {
+			"value": ""
+		},
+		"CosmosDb2_connectionString": {
+			"value": ""
+		},
+		"FileServer1_password": {
+			"value": ""
+		},
+		"Hive1_password": {
+			"value": ""
+		},
+		"MicrosoftAccess1_connectionString": {
+			"value": ""
+		},
+		"MicrosoftAccess1_credential": {
+			"value": ""
+		},
+		"linkedService1_password": {
+			"value": ""
+		},
+		"linkedService2_clusterPassword": {
+			"value": ""
+		},
+		"linkedService2_clusterSshPassword": {
+			"value": ""
+		},
+		"linkedService2_servicePrincipalKey": {
+			"value": ""
+		},
+		"linkedService3_connectionString": {
+			"value": ""
+		},
+		"AzureBlob1_properties_typeProperties_fileName": {
+			"value": ""
+		},
+		"AzureBlob1_properties_typeProperties_folderPath": {
+			"value": "adftutorial"
+		},
+		"AzureBlob2_properties_typeProperties_fileName": {
+			"value": "@dataset().FileName"
+		},
+		"AzureBlob2_properties_typeProperties_folderPath": {
+			"value": "test"
+		},
+		"AzureBlob3_properties_typeProperties_fileName": {
+			"value": "final.csv"
+		},
+		"AzureBlob3_properties_typeProperties_folderPath": {
+			"value": "test"
+		},
+		"AzureBlob4_properties_typeProperties_fileName": {
+			"value": ""
+		},
+		"AzureBlob4_properties_typeProperties_folderPath": {
+			"value": "avro"
+		},
+		"AzureBlob5_properties_typeProperties_fileName": {
+			"value": ""
+		},
+		"AzureBlob5_properties_typeProperties_folderPath": {
+			"value": "repo/rename test"
+		},
+		"AzureDataLakeStoreFile1_properties_typeProperties_fileName": {
+			"value": ""
+		},
+		"AzureDataLakeStoreFile1_properties_typeProperties_folderPath": {
+			"value": "clusters/hdiadls"
+		},
+		"BlobDataset_properties_typeProperties_folderPath": {
+			"value": "@{dataset().path}"
+		},
+		"BlobString_properties_typeProperties_fileName": {
+			"value": "Time.txt"
+		},
+		"BlobString_properties_typeProperties_folderPath": {
+			"value": "adftutorial"
+		},
+		"BlobTest_properties_typeProperties_fileName": {
+			"value": "Date2.txt"
+		},
+		"BlobTest_properties_typeProperties_folderPath": {
+			"value": "adftutorial"
+		},
+		"ADLSgen2_properties_typeProperties_url": {
+			"value": "https://bhadlsg2.dfs.core.windows.net"
+		},
+		"AzureBatch1_properties_typeProperties_accountName": {
+			"value": "jackiebatch"
+		},
+		"AzureBatch1_properties_typeProperties_batchUri": {
+			"value": "https://jackiebatch.eastus.batch.azure.com"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_dataLakeStoreUri": {
+			"value": "https://bohhdi.azuredatalakestore.net/webhdfs/v1"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_servicePrincipalId": {
+			"value": "110c5afe-3fcc-4017-839e-5b7438562b14"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_tenant": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_subscriptionId": {
+			"value": "97ab891d-1b78-4f5e-b462-a6c9362ade5e"
+		},
+		"AzureDataLakeStore1_properties_typeProperties_resourceGroupName": {
+			"value": "HDI"
+		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://bh4DB.vault.azure.net/"
+		},
+		"FileServer1_properties_typeProperties_host": {
+			"value": "C:\\"
+		},
+		"FileServer1_properties_typeProperties_userId": {
+			"value": "bohzhan"
+		},
+		"Hive1_properties_typeProperties_host": {
+			"value": "bhhive.azurehdinsight.net"
+		},
+		"Hive1_properties_typeProperties_username": {
+			"value": "admin"
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"value": "http://static.data.gov.hk/td/routes-and-fares/RSTOP_BUS.mdb"
+		},
+		"RestServiceBH_properties_typeProperties_url": {
+			"value": "https://www.baidu.com"
+		},
+		"linkedService1_properties_typeProperties_userName": {
+			"value": "admin"
+		},
+		"linkedService2_properties_typeProperties_hostSubscriptionId": {
+			"value": "97ab891d-1b78-4f5e-b462-a6c9362ade5e"
+		},
+		"linkedService2_properties_typeProperties_clusterResourceGroup": {
+			"value": "BhADF"
+		},
+		"linkedService2_properties_typeProperties_servicePrincipalId": {
+			"value": "6e1d754e-077d-4680-9592-5e55b4b38c4a"
+		},
+		"linkedService2_properties_typeProperties_tenant": {
+			"value": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+		},
+		"GetTG_properties_pipeline_parameters_test": {
+			"value": "@trigger().outputs.windowStartTime"
+		},
+		"eventtrigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/97ab891d-1b78-4f5e-b462-a6c9362ade5e/resourceGroups/BhADF/providers/Microsoft.Storage/storageAccounts/bdblob"
+		},
+		"trigger1_properties_Adfv2QuickStartPipeline_parameters_inputPath": {
+			"value": "a"
+		},
+		"trigger1_properties_Adfv2QuickStartPipeline_parameters_outputPath": {
+			"value": "a"
+		},
+		"trigger3_properties_typeProperties_scope": {
+			"value": "/subscriptions/97ab891d-1b78-4f5e-b462-a6c9362ade5e/resourceGroups/BhADF/providers/Microsoft.Storage/storageAccounts/bdblob"
+		}
+	}
+}
