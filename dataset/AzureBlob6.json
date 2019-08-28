@@ -1,0 +1,36 @@
+{
+	"name": "AzureBlob6",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureBlob",
+		"structure": [
+			{
+				"name": "JobId"
+			},
+			{
+				"name": "JobDate"
+			},
+			{
+				"name": "Skill.Cluster"
+			},
+			{
+				"name": "Skill.Skill"
+			}
+		],
+		"typeProperties": {
+			"format": {
+				"type": "JsonFormat",
+				"filePattern": "arrayOfObjects",
+				"jsonPathDefinition": {
+					"": "$"
+				}
+			},
+			"fileName": "ConvertResult,json",
+			"folderPath": "adftutorial"
+		}
+	}
+}

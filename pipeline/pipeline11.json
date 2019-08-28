@@ -1,0 +1,90 @@
+{
+	"name": "pipeline11",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy Data1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "BlobSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "JobId",
+									"type": "String"
+								},
+								"sink": {
+									"name": "JobId"
+								}
+							},
+							{
+								"source": {
+									"name": "JobDate",
+									"type": "String"
+								},
+								"sink": {
+									"name": "JobDate"
+								}
+							},
+							{
+								"source": {
+									"name": "SkillCluster",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Skill.Cluster"
+								}
+							},
+							{
+								"source": {
+									"name": "Skill",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Skill.Skill"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DelimitedText2",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureBlob6",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

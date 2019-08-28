@@ -25,6 +25,10 @@
 					"dataflow": {
 						"referenceName": "dataflow2",
 						"type": "DataFlowReference"
+					},
+					"integrationRuntime": {
+						"referenceName": "B9AEBE78-33DD-4F91-9A2B-19ACF9BFB7DE-NewIR",
+						"type": "IntegrationRuntimeReference"
 					}
 				}
 			},
