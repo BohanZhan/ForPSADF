@@ -9,24 +9,37 @@
 		"type": "AzureBlob",
 		"structure": [
 			{
-				"name": "Job.JobId"
+				"name": "JobId",
+				"type": "Int64"
 			},
 			{
-				"name": "Job.JobDate"
+				"name": "JobDate",
+				"type": "String"
 			},
 			{
-				"name": "Job.Skills.Cluster"
+				"name": "Skills",
+				"type": "String"
 			},
 			{
-				"name": "Job.Skills.Skill"
+				"name": "Skill",
+				"type": "Int64"
+			},
+			{
+				"name": "SkillCluster",
+				"type": "String"
 			}
 		],
 		"typeProperties": {
 			"format": {
 				"type": "JsonFormat",
 				"filePattern": "arrayOfObjects",
+				"jsonNodeReference": "$.['Skills']",
 				"jsonPathDefinition": {
-					"": "$"
+					"JobId": "$.['JobId']",
+					"JobDate": "$.['JobDate']",
+					"Skills": "$.['Skills']",
+					"Skill": "['Skill']",
+					"SkillCluster": "['SkillCluster']"
 				}
 			},
 			"fileName": "ConvertResult.json",
