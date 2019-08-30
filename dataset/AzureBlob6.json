@@ -9,16 +9,16 @@
 		"type": "AzureBlob",
 		"structure": [
 			{
-				"name": "JobId"
+				"name": "Job.JobId"
 			},
 			{
-				"name": "JobDate"
+				"name": "Job.JobDate"
 			},
 			{
-				"name": "Skill.Cluster"
+				"name": "Job.Skills.Cluster"
 			},
 			{
-				"name": "Skill.Skill"
+				"name": "Job.Skills.Skill"
 			}
 		],
 		"typeProperties": {
@@ -29,7 +29,7 @@
 					"": "$"
 				}
 			},
-			"fileName": "ConvertResult,json",
+			"fileName": "ConvertResult.json",
 			"folderPath": "adftutorial"
 		}
 	}
