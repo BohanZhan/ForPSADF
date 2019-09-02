@@ -1,0 +1,31 @@
+{
+	"name": "integrationRuntime3",
+	"properties": {
+		"type": "Managed",
+		"typeProperties": {
+			"computeProperties": {
+				"location": "East US 2",
+				"nodeSize": "Standard_D8_v3",
+				"numberOfNodes": 2,
+				"maxParallelExecutionsPerNode": 8,
+				"vNetProperties": {
+					"vNetId": "/subscriptions/97ab891d-1b78-4f5e-b462-a6c9362ade5e/resourceGroups/BhADF/providers/Microsoft.Network/virtualNetworks/usadfssis",
+					"subnet": "default"
+				}
+			},
+			"ssisProperties": {
+				"catalogInfo": {
+					"catalogServerEndpoint": "adfssis.database.windows.net",
+					"catalogAdminUserName": "bohzhan@microsoft.com",
+					"catalogAdminPassword": {
+						"type": "SecureString",
+						"value": "**********"
+					},
+					"catalogPricingTier": "S1"
+				},
+				"edition": "Standard",
+				"licenseType": "LicenseIncluded"
+			}
+		}
+	}
+}
