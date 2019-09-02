@@ -23,6 +23,13 @@
 					},
 					"catalogPricingTier": "S1"
 				},
+				"customSetupScriptProperties": {
+					"blobContainerUri": "https://bdblob.blob.core.windows.net/ssis",
+					"sasToken": {
+						"type": "SecureString",
+						"value": "**********"
+					}
+				},
 				"edition": "Standard",
 				"licenseType": "LicenseIncluded"
 			}
