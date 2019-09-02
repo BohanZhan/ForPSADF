@@ -16,7 +16,7 @@
 			"ssisProperties": {
 				"catalogInfo": {
 					"catalogServerEndpoint": "adfssis.database.windows.net",
-					"catalogAdminUserName": "bohzhan@microsoft.com",
+					"catalogAdminUserName": "bohzhan",
 					"catalogAdminPassword": {
 						"type": "SecureString",
 						"value": "**********"
