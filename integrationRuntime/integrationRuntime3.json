@@ -31,17 +31,7 @@
 					}
 				},
 				"edition": "Standard",
-				"licenseType": "LicenseIncluded",
-				"dataProxyProperties": {
-					"connectVia": {
-						"type": "IntegrationRuntimeReference",
-						"referenceName": "SHIR"
-					},
-					"stagingLinkedService": {
-						"type": "LinkedServiceReference",
-						"referenceName": "AzureBlobStorage3"
-					}
-				}
+				"licenseType": "LicenseIncluded"
 			}
 		}
 	}
