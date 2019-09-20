@@ -9,7 +9,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "A",
-					"value": ""
+					"value": {
+						"value": "@pipeline().parameters.Par",
+						"type": "Expression"
+					}
 				}
 			}
 		],
