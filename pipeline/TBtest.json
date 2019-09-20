@@ -1,0 +1,28 @@
+{
+	"name": "TBtest",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set Variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "A",
+					"value": ""
+				}
+			}
+		],
+		"parameters": {
+			"Par": {
+				"type": "string"
+			}
+		},
+		"variables": {
+			"A": {
+				"type": "String"
+			}
+		},
+		"annotations": []
+	}
+}
