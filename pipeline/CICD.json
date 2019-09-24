@@ -1,6 +1,7 @@
 {
 	"name": "CICD",
 	"properties": {
+		"description": "a",
 		"activities": [
 			{
 				"name": "Set Variable1",
